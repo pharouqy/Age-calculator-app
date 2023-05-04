@@ -14,30 +14,33 @@
   <main>
     <section>
       <div> <label for="day">day</label>
-        <input type="text" name="day" id="day">
+        <input type="text" name="day" id="day" maxlength="2">
       </div>
       <div> <label for="month">month</label>
-        <input type="text" name="month" id="month">
+        <input type="text" name="month" id="month" maxlength="2">
       </div>
       <div> <label for="year">year</label>
-        <input type="text" name="year" id="year">
+        <input type="text" name="year" id="year" maxlength="4">
       </div>
     </section>
     <div>
       <span></span>
       <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
-        <g fill="none" stroke="#000" stroke-width="2">
+        <g fill="none" stroke="#fff" stroke-width="2">
           <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
         </g>
       </svg>
     </div>
     <section>
-      <span>--</span>
-      <h2>days</h2>
-      <span>--</span>
-      <h2>months</h2>
-      <span>--</span>
-      <h2>years</h2>
+      <div> <span>--</span>
+        <h2>years</h2>
+      </div>
+      <div> <span>--</span>
+        <h2>months</h2>
+      </div>
+      <div> <span>--</span>
+        <h2>days</h2>
+      </div>
     </section>
   </main>
   <script src="./js/script.js"></script>
