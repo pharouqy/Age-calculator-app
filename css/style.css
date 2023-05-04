@@ -172,11 +172,10 @@ div:nth-child(2) > svg:active {
 
 section:nth-child(3) > div > h2 {
   font-size: 2.5em;
-  font-family: "poppinsextrabold_italic", "Franklin Gothic Medium", "Arial Narrow",
-    Arial;
+  font-family: "poppinsextrabold_italic", "Franklin Gothic Medium",
+    "Arial Narrow", Arial;
   display: inline-block;
   margin: 0;
-  font-weight: ;
 }
 
 section:nth-child(3) > div span {
@@ -192,7 +191,14 @@ section:nth-child(3) > div {
 }
 
 section:nth-child(3) {
-  margin: 50px 0;
+  margin: 10px 0;
+}
+
+#error-day,
+#error-month,
+#error-year {
+  color: hsl(0, 100%, 67%);
+  font-size: 0.5em;
 }
 
 @media all and (max-width: 375px) {
@@ -206,7 +212,7 @@ section:nth-child(3) {
     margin: 0px 10px 0px 0;
   }
   section:nth-child(3) {
-    font-size: 0.5em;
+    font-size: 0.7em;
     height: 250px;
     font-weight: bolder;
     display: flex;
