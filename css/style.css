@@ -113,7 +113,17 @@ section:nth-child(1) {
 input {
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 10px;
-  height: 70px;
+  height: 85px;
+  font-size: 1.2em;
+  padding: 0px 0px 0px 30px;
+  width: 185px;
+  font-weight: 900;
+  font-family: "poppinsbold", "Franklin Gothic Medium", "Arial Narrow", Arial;
+}
+
+input:focus, input:active {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: none;
 }
 
 section:nth-child(1) > div {
