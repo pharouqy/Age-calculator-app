@@ -26,12 +26,10 @@ const mois = now.getMonth();
 const jours = now.getDate();
 
 async function handelDate(day, month, year) {
-  const array = [];
   day.addEventListener("change", async (e) => {
     const errorDay = document.getElementById("error-day");
     if (e.target.value != "" && e.target.value <= 31) {
       value = await e.target.value;
-      array.push(value);
       errorDay.textContent = "";
     } else if (e.target.value > 31) {
       errorDay.textContent = "Must be a valid day";
@@ -43,7 +41,6 @@ async function handelDate(day, month, year) {
     const errorMonth = document.getElementById("error-month");
     if (e.target.value != "" && e.target.value <= 12) {
       value = await e.target.value;
-      array.push(value);
       errorMonth.textContent = "";
     } else if (e.target.value >= 12) {
       errorMonth.textContent = "Must be a valid month";
@@ -55,7 +52,6 @@ async function handelDate(day, month, year) {
     const errorYear = document.getElementById("error-year");
     if (e.target.value != "" && e.target.value <= now.getFullYear()) {
       value = await e.target.value;
-      array.push(value);
       errorYear.textContent = "";
     } else if (e.target.value >= now.getFullYear()) {
       errorYear.textContent = "Must be in the past";
