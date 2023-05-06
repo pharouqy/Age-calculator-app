@@ -20,6 +20,8 @@ const resultDays = document.querySelector(
   "section:nth-child(3) > div:nth-child(3) > span"
 );
 
+const label = document.getElementsByTagName("label");
+
 const now = new Date();
 const annees = now.getFullYear();
 const mois = now.getMonth();
@@ -31,9 +33,15 @@ async function handelDate(day, month, year) {
     if (e.target.value != "" && e.target.value <= 31) {
       value = await e.target.value;
       errorDay.textContent = "";
+      label[0].style.color = "unset";
+      day.style.border = "1px solid hsl(0, 0%, 86%)";
     } else if (e.target.value > 31) {
+      label[0].style.color = "hsl(0, 100%, 67%)";
+      day.style.border = "1px solid hsl(0, 100%, 67%)";
       errorDay.textContent = "Must be a valid day";
     } else {
+      label[0].style.color = "hsl(0, 100%, 67%)";
+      day.style.border = "1px solid hsl(0, 100%, 67%)";
       errorDay.textContent = "This field is required";
     }
   });
@@ -42,9 +50,15 @@ async function handelDate(day, month, year) {
     if (e.target.value != "" && e.target.value <= 12) {
       value = await e.target.value;
       errorMonth.textContent = "";
+      label[1].style.color = "unset";
+      month.style.border = "1px solid hsl(0, 0%, 86%)";
     } else if (e.target.value >= 12) {
+      label[1].style.color = "hsl(0, 100%, 67%)";
+      month.style.border = "1px solid hsl(0, 100%, 67%)";
       errorMonth.textContent = "Must be a valid month";
     } else {
+      label[1].style.color = "hsl(0, 100%, 67%)";
+      month.style.border = "1px solid hsl(0, 100%, 67%)";
       errorMonth.textContent = "This field is required";
     }
   });
@@ -53,9 +67,15 @@ async function handelDate(day, month, year) {
     if (e.target.value != "" && e.target.value <= now.getFullYear()) {
       value = await e.target.value;
       errorYear.textContent = "";
+      label[2].style.color = "unset";
+      year.style.border = "1px solid hsl(0, 0%, 86%)";
     } else if (e.target.value >= now.getFullYear()) {
+      label[2].style.color = "hsl(0, 100%, 67%)";
+      year.style.border = "1px solid hsl(0, 100%, 67%)";
       errorYear.textContent = "Must be in the past";
     } else {
+      label[2].style.color = "hsl(0, 100%, 67%)";
+      year.style.border = "1px solid hsl(0, 100%, 67%)";
       errorYear.textContent = "This field is required";
     }
   });
