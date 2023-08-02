@@ -24,7 +24,7 @@ const label = document.getElementsByTagName("label");
 
 const now = new Date();
 const annees = now.getFullYear();
-const mois = now.getMonth();
+const mois = now.getMonth() + 1;
 const jours = now.getDate();
 
 async function handelDate(day, month, year) {
